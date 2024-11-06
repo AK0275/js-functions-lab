@@ -69,13 +69,12 @@ return tip
 console.log('Exercise 7 Result:', calculateTip(100, 10));
 
 const convertTemperature = (temperature, scale) => {
-let convert
-if (scale === "c") {
-    convert =(temperature = 0)
-} else if (scale === "f") {
-    convert = (temperature = 32)
+if (scale === 'C') {
+    return (temperature * 9/5) + 32;
+} else if (scale === 'F') {
+    return (temperature - 32) * 5/9;
 } else {
-    return temperature, scale
+    throw new Error("Invlid scale. Use 'C' for celsius or 'F' for fahrenheit.")
 }
 }
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
